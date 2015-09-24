@@ -1,0 +1,99 @@
+# Copyright (c) 2015 Atmel Corp. All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+
+#--------------------------------------------------------------------------------------#
+
+atmega328p_xplained_mini.name=Atmel atmega328p Xplained mini
+
+atmega328p_xplained_mini.vid.0=0x03eb
+atmega328p_xplained_mini.pid.0=0x2145
+
+atmega328p_xplained_mini.upload.tool=arduino:avrdude
+atmega328p_xplained_mini.upload.protocol=arduino
+atmega328p_xplained_mini.upload.maximum_size=32256
+atmega328p_xplained_mini.upload.maximum_data_size=2048
+atmega328p_xplained_mini.upload.speed=55600
+
+atmega328p_xplained_mini.bootloader.tool=arduino:avrdude
+atmega328p_xplained_mini.bootloader.low_fuses=0xFE
+atmega328p_xplained_mini.bootloader.high_fuses=0xD8
+atmega328p_xplained_mini.bootloader.extended_fuses=0xE0
+atmega328p_xplained_mini.bootloader.unlock_bits=0x3F
+atmega328p_xplained_mini.bootloader.lock_bits=0x0F
+atmega328p_xplained_mini.bootloader.file=optiboot/optiboot_xplained328p.hex
+
+atmega328p_xplained_mini.build.mcu=atmega328p
+atmega328p_xplained_mini.build.f_cpu=16000000L
+atmega328p_xplained_mini.build.board=ATMEL_ATMEGA328P_XMINI
+atmega328p_xplained_mini.build.core=arduino:arduino
+#atmega328p_xplained_mini.build.variant=standard
+
+#--------------------------------------------------------------------------------------#
+
+atmega328pb_xplained_mini.name=Atmel atmega328pb Xplained mini
+
+atmega328pb_xplained_mini.vid.0=0x03eb
+atmega328pb_xplained_mini.pid.0=0x2145
+
+atmega328pb_xplained_mini.upload.tool=arduino:avrdude
+atmega328pb_xplained_mini.upload.protocol=arduino
+atmega328pb_xplained_mini.upload.maximum_size=32256
+atmega328pb_xplained_mini.upload.maximum_data_size=2048
+atmega328pb_xplained_mini.upload.speed=55600
+
+atmega328pb_xplained_mini.bootloader.tool=arduino:avrdude
+atmega328pb_xplained_mini.bootloader.low_fuses=0xFE
+atmega328pb_xplained_mini.bootloader.high_fuses=0xD8
+atmega328pb_xplained_mini.bootloader.extended_fuses=0xE0
+atmega328pb_xplained_mini.bootloader.unlock_bits=0x3F
+atmega328pb_xplained_mini.bootloader.lock_bits=0x0F
+atmega328pb_xplained_mini.bootloader.file=optiboot/optiboot_xplained328pb.hex
+
+atmega328pb_xplained_mini.build.mcu=atmega328pb
+atmega328pb_xplained_mini.build.f_cpu=16000000L
+atmega328pb_xplained_mini.build.board=ATMEL_ATMEGA328PB_XMINI
+atmega328pb_xplained_mini.build.core=arduino:arduino
+#atmega328pb_xplained_mini.build.variant=standard
+
+#--------------------------------------------------------------------------------------#
+
+atmega168pb_xplained_mini.name=Atmel atmega168p Xplained mini
+
+atmega168pb_xplained_mini.vid.0=0x03eb
+atmega168pb_xplained_mini.pid.0=0x2145
+
+atmega168pb_xplained_mini.upload.tool=arduino:avrdude
+atmega168pb_xplained_mini.upload.protocol=arduino
+atmega168pb_xplained_mini.upload.maximum_size=32256
+atmega168pb_xplained_mini.upload.maximum_data_size=2048
+atmega168pb_xplained_mini.upload.speed=55600
+
+atmega168pb_xplained_mini.bootloader.tool=arduino:avrdude
+atmega168pb_xplained_mini.bootloader.low_fuses=0xFE
+atmega168pb_xplained_mini.bootloader.high_fuses=0xD8
+atmega168pb_xplained_mini.bootloader.extended_fuses=0xE0
+atmega168pb_xplained_mini.bootloader.unlock_bits=0x3F
+atmega168pb_xplained_mini.bootloader.lock_bits=0x0F
+atmega168pb_xplained_mini.bootloader.file=optiboot/optiboot_xplained168pb.hex
+
+atmega168pb_xplained_mini.build.mcu=atmega168pb
+atmega168pb_xplained_mini.build.f_cpu=16000000L
+atmega168pb_xplained_mini.build.board=ATMEL_ATMEGA168PB_XMINI
+atmega168pb_xplained_mini.build.core=arduino:arduino
+#atmega168pb_xplained_mini.build.variant=standard
+
+#--------------------------------------------------------------------------------------#
