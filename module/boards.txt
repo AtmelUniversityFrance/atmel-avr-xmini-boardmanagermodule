@@ -1,4 +1,4 @@
-# Copyright (c) 2015 Atmel Corp. All right reserved.
+# Copyright (c) 2015 Atmel Corp./Thibaut VIARD. All right reserved.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -34,7 +34,7 @@ atmega328p_xplained_mini.bootloader.high_fuses=0xD8
 atmega328p_xplained_mini.bootloader.extended_fuses=0xE0
 atmega328p_xplained_mini.bootloader.unlock_bits=0x3F
 atmega328p_xplained_mini.bootloader.lock_bits=0x0F
-atmega328p_xplained_mini.bootloader.file=optiboot/optiboot_xplained328p.hex
+atmega328p_xplained_mini.bootloader.file=optiboot/bootloaders/optiboot/optiboot_xplained328p.hex
 
 atmega328p_xplained_mini.build.mcu=atmega328p
 atmega328p_xplained_mini.build.f_cpu=16000000L
@@ -61,7 +61,7 @@ atmega328pb_xplained_mini.bootloader.high_fuses=0xD8
 atmega328pb_xplained_mini.bootloader.extended_fuses=0xE0
 atmega328pb_xplained_mini.bootloader.unlock_bits=0x3F
 atmega328pb_xplained_mini.bootloader.lock_bits=0x0F
-atmega328pb_xplained_mini.bootloader.file=optiboot/optiboot_xplained328pb.hex
+atmega328pb_xplained_mini.bootloader.file=optiboot/bootloaders/optiboot/optiboot_xplained328pb.hex
 
 atmega328pb_xplained_mini.build.mcu=atmega328pb
 atmega328pb_xplained_mini.build.f_cpu=16000000L
@@ -78,8 +78,8 @@ atmega168pb_xplained_mini.pid.0=0x2145
 
 atmega168pb_xplained_mini.upload.tool=arduino:avrdude
 atmega168pb_xplained_mini.upload.protocol=arduino
-atmega168pb_xplained_mini.upload.maximum_size=32256
-atmega168pb_xplained_mini.upload.maximum_data_size=2048
+atmega168pb_xplained_mini.upload.maximum_size=15872
+atmega168pb_xplained_mini.upload.maximum_data_size=1024
 atmega168pb_xplained_mini.upload.speed=55600
 
 atmega168pb_xplained_mini.bootloader.tool=arduino:avrdude
@@ -88,7 +88,7 @@ atmega168pb_xplained_mini.bootloader.high_fuses=0xD8
 atmega168pb_xplained_mini.bootloader.extended_fuses=0xE0
 atmega168pb_xplained_mini.bootloader.unlock_bits=0x3F
 atmega168pb_xplained_mini.bootloader.lock_bits=0x0F
-atmega168pb_xplained_mini.bootloader.file=optiboot/optiboot_xplained168pb.hex
+atmega168pb_xplained_mini.bootloader.file=optiboot/bootloaders/optiboot/optiboot_xplained168pb.hex
 
 atmega168pb_xplained_mini.build.mcu=atmega168pb
 atmega168pb_xplained_mini.build.f_cpu=16000000L
