@@ -1,0 +1,54 @@
+{
+  "packages":
+  [
+    {
+      "name": "atmel-avr-xminis",
+      "maintainer": "Atmel University France",
+      "websiteURL": "https://github.com/AtmelUniversityFrance/atmel-avr-xmini-boardmanagermodule/wiki",
+      "help":
+      {
+        "online": "http://www.arduino.cc/en/Reference/HomePage"
+      },
+      "platforms":
+      [
+        {
+          "name": "Atmel AVR Xplained-minis",
+          "architecture": "avr",
+          "version": "%%VERSION%%",
+          "category": "Contributed",
+          "url": "https://github.com/AtmelUniversityFrance/atmel-avr-xmini-boardmanagermodule/releases/download/v%%VERSION%%/%%FILENAME%%",
+          "archiveFileName": "%%FILENAME%%",
+          "checksum": "SHA-256:%%CHECKSUM%%",
+          "size": "%%SIZE%%",
+          "boards": [
+            {
+              "name": "atmega168pb-xmini"
+            },
+            {
+              "name": "atmega328pb-xmini"
+            },
+            {
+              "name": "atmega328p-xmini"
+            },
+          ],
+          "toolsDependencies":
+          [
+              {
+                  "packager": "arduino",
+                  "name": "avr-gcc",
+                  "version": "4.8.1-arduino5"
+              },
+              {
+                  "packager": "arduino",
+                  "name": "avrdude",
+                  "version": "6.0.1-arduino5"
+              }
+          ]
+        }
+      ],
+      "tools":
+      [
+      ]
+    }
+  ]
+}
