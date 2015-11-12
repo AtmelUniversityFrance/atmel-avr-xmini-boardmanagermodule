@@ -1,0 +1,23 @@
+language: c
+
+compiler: gcc
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
+
+script:
+  - make
+
+env:
+
+#deploy:
+#  provider: releases
+#  user: "GITHUB USERNAME"
+#  password: "GITHUB PASSWORD"
+#  file: "FILE TO UPLOAD"
+#  skip_cleanup: true
+#  on:
+#    tags: true
