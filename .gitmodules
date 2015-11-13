@@ -1,3 +1,3 @@
 [submodule "optiboot"]
 	path = module/bootloaders/optiboot
-	url = git@github.com:Optiboot/optiboot.git
+	url = git@github.com:AtmelUniversityFrance/optiboot.git
