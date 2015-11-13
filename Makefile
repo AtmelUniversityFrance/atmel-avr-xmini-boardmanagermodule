@@ -72,7 +72,7 @@ clean:
 
 print_info:
 	@echo ----------------------------------------------------------
-	@echo Building ExperimentalCore-SAM using
+	@echo Building $(PACKAGE_NAME) using
 	@echo "CURDIR             = $(CURDIR)"
 	@echo "OS                 = $(OS)"
 	@echo "SHELL              = $(SHELL)"
