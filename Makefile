@@ -76,12 +76,9 @@ print_info:
 	@echo "CURDIR             = $(CURDIR)"
 	@echo "OS                 = $(OS)"
 	@echo "SHELL              = $(SHELL)"
-	@echo "TERM               = $(TERM)"
 	@echo "VARIANTS_PATH      = $(VARIANTS_PATH)"
 	@echo "VARIANTS           = $(VARIANTS)"
 	@echo "OPTIBOOT_VARIANTS  = $(OPTIBOOT_VARIANTS)"
-	@echo "VARIANT_NAME       = $(VARIANT_NAME)"
-	@echo "EXAMPLES_PATH      = $(EXAMPLES_PATH)"
 	@echo "CORE_VERSION       = $(CORE_VERSION)"
 	@echo "PACKAGE_NAME       = $(PACKAGE_NAME)"
 #	"$(CC)" -v
