@@ -27,7 +27,7 @@ VARIANTS_PATH := $(ROOT_PATH)/module/variants
 
 # Variant list, can be overriden via command line or ENV
 VARIANTS?=$(shell ls --hide=*.mk $(VARIANTS_PATH))
-OPTIBOOT_VARIANTS := xplained168pb xplained328p xplained328pb
+OPTIBOOT_VARIANTS := xplained328p xplained328pb xplained168pb
 
 ifeq ($(TRAVIS),true)
 PRINT_INFO_TRAVIS=print_info_travis
@@ -105,7 +105,7 @@ print_info_travis:
 	@echo "TRAVIS_BUILD_NUMBER = $(TRAVIS_BUILD_NUMBER)"
 
 optiboot:
-	$(MAKE) --no-builtin-rules $(OPTIBOOT_VARIANTS) -C module/bootloaders/optiboot/optiboot/bootloaders/optiboot
+	$(MAKE) clean $(OPTIBOOT_VARIANTS) -C module/bootloaders/optiboot/optiboot/bootloaders/optiboot
 
 # sed s/%%PR_NUMBER%%/$(TRAVIS_JOB_NUMBER)/ | sed s/%%BUILD_NUMBER%%/$(TRAVIS_BUILD_NUMBER)/ |sed s/%%VERSION%%/$(CORE_VERSION)-build-$(TRAVIS_BUILD_NUMBER)/
 postpackaging:
