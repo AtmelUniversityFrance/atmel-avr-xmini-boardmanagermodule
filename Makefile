@@ -27,6 +27,7 @@ VARIANTS_PATH := $(ROOT_PATH)/module/variants
 
 # Variant list, can be overriden via command line or ENV
 VARIANTS?=$(shell ls --hide=*.mk $(VARIANTS_PATH))
+OPTIBOOT_VARIANTS := xplained168pb xplained328p xplained328pb
 
 ifeq ($(TRAVIS),true)
 PRINT_INFO_TRAVIS=print_info_travis
@@ -50,13 +51,13 @@ endif
 # end of packaging specific
 # -----------------------------------------------------------------------------
 
-.PHONY: all clean print_info print_info_travis postpackaging
+.PHONY: all clean print_info print_info_travis postpackaging optiboot
 
 # Arduino module packaging:
 #   - exclude version control system files, here git files and folders .git, .gitattributes and .gitignore
 #   - exclude 'extras' folder
 #   - exclude 'obj' folder from variants
-all: clean print_info $(PRINT_INFO_TRAVIS)
+all: clean print_info $(PRINT_INFO_TRAVIS) optiboot
 	@echo ----------------------------------------------------------
 	@echo "Packaging module."
 	tar --transform "s|module|$(PACKAGE_NAME)-$(CORE_VERSION)|g" --exclude=.gitattributes --exclude=.travis.yml --exclude-vcs --exclude-vcs-ignores --exclude=obj -cjf "$(PACKAGE_NAME)-$(CORE_VERSION).tar.bz2" "$(PACKAGE_FOLDER)"
@@ -72,36 +73,39 @@ clean:
 print_info:
 	@echo ----------------------------------------------------------
 	@echo Building ExperimentalCore-SAM using
-	@echo CURDIR        = $(CURDIR)
-	@echo OS            = $(OS)
-	@echo SHELL         = $(SHELL)
-	@echo TERM          = $(TERM)
-	@echo VARIANTS_PATH = $(VARIANTS_PATH)
-	@echo VARIANTS      = $(VARIANTS)
-	@echo VARIANT_NAME  = $(VARIANT_NAME)
-	@echo EXAMPLES_PATH = $(EXAMPLES_PATH)
-	@echo CORE_VERSION  = $(CORE_VERSION)
-	@echo PACKAGE_NAME  = $(PACKAGE_NAME)
+	@echo "CURDIR             = $(CURDIR)"
+	@echo "OS                 = $(OS)"
+	@echo "SHELL              = $(SHELL)"
+	@echo "TERM               = $(TERM)"
+	@echo "VARIANTS_PATH      = $(VARIANTS_PATH)"
+	@echo "VARIANTS           = $(VARIANTS)"
+	@echo "OPTIBOOT_VARIANTS  = $(OPTIBOOT_VARIANTS)"
+	@echo "VARIANT_NAME       = $(VARIANT_NAME)"
+	@echo "EXAMPLES_PATH      = $(EXAMPLES_PATH)"
+	@echo "CORE_VERSION       = $(CORE_VERSION)"
+	@echo "PACKAGE_NAME       = $(PACKAGE_NAME)"
 #	"$(CC)" -v
 #	env
 
 print_info_travis:
 	@echo ----------------------------------------------------------
 	@echo Travis-CI envvars
-	@echo TRAVIS_OS_NAME      = $(TRAVIS_OS_NAME)
-	@echo TRAVIS_LANGUAGE     = $(TRAVIS_LANGUAGE)
-	@echo TRAVIS_REPO_SLUG    = $(TRAVIS_REPO_SLUG)
-	@echo TRAVIS_BRANCH       = $(TRAVIS_BRANCH)
-	@echo TRAVIS_TAG          = $(TRAVIS_TAG)
-	@echo TRAVIS_PULL_REQUEST = $(TRAVIS_PULL_REQUEST)
-	@echo TRAVIS_COMMIT       = $(TRAVIS_COMMIT)
-	@echo TRAVIS_COMMIT_RANGE = $(TRAVIS_COMMIT_RANGE)
-	@echo TRAVIS_JOB_ID       = $(TRAVIS_JOB_ID)
-	@echo TRAVIS_JOB_NUMBER   = $(TRAVIS_JOB_NUMBER)
-	@echo TRAVIS_BUILD_DIR    = $(TRAVIS_BUILD_DIR)
-	@echo TRAVIS_BUILD_ID     = $(TRAVIS_BUILD_ID)
-	@echo TRAVIS_BUILD_NUMBER = $(TRAVIS_BUILD_NUMBER)
+	@echo "TRAVIS_OS_NAME      = $(TRAVIS_OS_NAME)"
+	@echo "TRAVIS_LANGUAGE     = $(TRAVIS_LANGUAGE)"
+	@echo "TRAVIS_REPO_SLUG    = $(TRAVIS_REPO_SLUG)"
+	@echo "TRAVIS_BRANCH       = $(TRAVIS_BRANCH)"
+	@echo "TRAVIS_TAG          = $(TRAVIS_TAG)"
+	@echo "TRAVIS_PULL_REQUEST = $(TRAVIS_PULL_REQUEST)"
+	@echo "TRAVIS_COMMIT       = $(TRAVIS_COMMIT)"
+	@echo "TRAVIS_COMMIT_RANGE = $(TRAVIS_COMMIT_RANGE)"
+	@echo "TRAVIS_JOB_ID       = $(TRAVIS_JOB_ID)"
+	@echo "TRAVIS_JOB_NUMBER   = $(TRAVIS_JOB_NUMBER)"
+	@echo "TRAVIS_BUILD_DIR    = $(TRAVIS_BUILD_DIR)"
+	@echo "TRAVIS_BUILD_ID     = $(TRAVIS_BUILD_ID)"
+	@echo "TRAVIS_BUILD_NUMBER = $(TRAVIS_BUILD_NUMBER)"
 
+optiboot:
+	$(MAKE) --no-builtin-rules $(OPTIBOOT_VARIANTS) -C module/bootloaders/optiboot/optiboot/bootloaders/optiboot
 
 # sed s/%%PR_NUMBER%%/$(TRAVIS_JOB_NUMBER)/ | sed s/%%BUILD_NUMBER%%/$(TRAVIS_BUILD_NUMBER)/ |sed s/%%VERSION%%/$(CORE_VERSION)-build-$(TRAVIS_BUILD_NUMBER)/
 postpackaging:
