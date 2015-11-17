@@ -15,6 +15,9 @@ before_install:
 # - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
  - git submodule update --init --recursive
  - sudo apt-get update -qq
+ - which make
+ - wget http://ftp.gnu.org/gnu/make/make-4.1.tar.bz2 && tar -xjf make-4.1.tar.bz2 && cd make-4.1 && sudo configure && sudo make install
+ - which make
 
 install:
   - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
