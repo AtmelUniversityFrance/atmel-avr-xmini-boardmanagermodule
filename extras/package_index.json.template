@@ -29,7 +29,7 @@
             },
             {
               "name": "atmega328p-xmini"
-            },
+            }
           ],
           "toolsDependencies":
           [
