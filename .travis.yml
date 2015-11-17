@@ -20,7 +20,7 @@ before_install:
  - sudo wget http://ftp.gnu.org/gnu/make/make-4.1.tar.bz2
  - sudo tar -xjf make-4.1.tar.bz2
  - cd make-4.1
- - sudo configure
+ - sudo ./configure
  - sudo make install
  - which make
  - make --version
