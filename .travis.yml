@@ -24,11 +24,9 @@ before_install:
  - sudo ./configure
  - sudo make
  - sudo make install
- - ls -al
  - cp ./make ../..
  - cd ../..
- - which make
- - make --version
+ - ./make --version
 
 install:
   - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
