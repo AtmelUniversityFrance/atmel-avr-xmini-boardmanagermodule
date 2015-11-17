@@ -60,7 +60,7 @@ endif
 all: clean print_info $(PRINT_INFO_TRAVIS) optiboot
 	@echo ----------------------------------------------------------
 	@echo "Packaging module."
-	tar --transform "s|module|$(PACKAGE_NAME)-$(CORE_VERSION)|g" --exclude=.gitattributes --exclude=.travis.yml --exclude-vcs --exclude-vcs-ignores --exclude=obj -cjf "$(PACKAGE_NAME)-$(CORE_VERSION).tar.bz2" "$(PACKAGE_FOLDER)"
+	tar --transform "s|module|$(PACKAGE_NAME)-$(CORE_VERSION)|g" --exclude=.gitattributes --exclude=.travis.yml --exclude-vcs --exclude=obj -cjf "$(PACKAGE_NAME)-$(CORE_VERSION).tar.bz2" "$(PACKAGE_FOLDER)"
 	$(MAKE) --no-builtin-rules postpackaging -C .
 	@echo ----------------------------------------------------------
 
