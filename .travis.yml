@@ -15,20 +15,18 @@ before_install:
 # - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
  - git submodule update --init --recursive
  - sudo apt-get update -qq
- - which make
- - make --version
- - cd extras
- - sudo wget http://ftp.gnu.org/gnu/make/make-4.1.tar.bz2
- - sudo tar -xjf make-4.1.tar.bz2
- - cd make-4.1
- - sudo ./configure
- - sudo make
- - sudo make install
- - cp ./make ../..
- - cd ../..
- - ./make --version
 
 install:
+# compile GNU make 4.1 from sources before using it without defect for Optiboot build
+  - cd extras
+  - sudo wget http://ftp.gnu.org/gnu/make/make-4.1.tar.bz2
+  - sudo tar -xjf make-4.1.tar.bz2
+  - cd make-4.1
+  - sudo ./configure
+  - sudo make
+  - cp ./make ../..
+  - cd ../..
+# Install AVR tools
   - sudo apt-get install -qq gcc-avr binutils-avr avr-libc
 
 script:
