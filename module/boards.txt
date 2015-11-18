@@ -40,7 +40,7 @@ atmega328p_xplained_mini.build.mcu=atmega328p
 atmega328p_xplained_mini.build.f_cpu=16000000L
 atmega328p_xplained_mini.build.board=ATMEL_ATMEGA328P_XMINI
 atmega328p_xplained_mini.build.core=arduino:arduino
-atmega328p_xplained_mini.build.variant=atmega328p_xplained_mini
+atmega328p_xplained_mini.build.variant=atmega328p-xmini
 
 #--------------------------------------------------------------------------------------#
 
@@ -67,7 +67,7 @@ atmega328pb_xplained_mini.build.mcu=atmega328pb
 atmega328pb_xplained_mini.build.f_cpu=16000000L
 atmega328pb_xplained_mini.build.board=ATMEL_ATMEGA328PB_XMINI
 atmega328pb_xplained_mini.build.core=arduino:arduino
-atmega328pb_xplained_mini.build.variant=atmega328pb_xplained_mini
+atmega328pb_xplained_mini.build.variant=atmega328pb-xmini
 
 #--------------------------------------------------------------------------------------#
 
@@ -94,6 +94,6 @@ atmega168pb_xplained_mini.build.mcu=atmega168pb
 atmega168pb_xplained_mini.build.f_cpu=16000000L
 atmega168pb_xplained_mini.build.board=ATMEL_ATMEGA168PB_XMINI
 atmega168pb_xplained_mini.build.core=arduino:arduino
-atmega168pb_xplained_mini.build.variant=atmega168pb_xplained_mini
+atmega168pb_xplained_mini.build.variant=atmega168pb-xmini
 
 #--------------------------------------------------------------------------------------#
