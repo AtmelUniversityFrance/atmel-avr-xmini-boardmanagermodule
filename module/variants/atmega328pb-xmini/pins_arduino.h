@@ -40,9 +40,9 @@
  *                                   3V3  |o                  | |              D10 o| ~PB2 OC1B PCINT2 !SS
  *                                    5V  |o                  | |               D9 o| ~PB1 OC1A PCINT1
  *                                   GND  |o                  | |               D8 o|  PB0 CLK0 PCINT0 ICP1
- *                                   GND  |o             +------------+             |
- *                                   VIN  |o             | ATmega328P |         D7 o|  PD7 AIN1 PCINT23                J201, Digital I/O Low
- *                                        |              +------------+         D6 o| ~PD6 AIN0 PCINT22 OC0A
+ *                                   GND  |o            +-------------+             |
+ *                                   VIN  |o            | ATmega328PB |         D7 o|  PD7 AIN1 PCINT23                J201, Digital I/O Low
+ *                                        |             +-------------+         D6 o| ~PD6 AIN0 PCINT22 OC0A
  *  J203, Analog         PCINT8 ADC0 PC0  |o A0                                 D5 o| ~PD5 T1 PCINT21 OC0B
  *                       PCINT9 ADC1 PC1  |o A1                                 D4 o|  PD4 T0 PCINT20 XCK
  *                      PCINT10 ADC2 PC2  |o A2                                 D3 o| ~PD3 INT1 PCINT19 OC2B
