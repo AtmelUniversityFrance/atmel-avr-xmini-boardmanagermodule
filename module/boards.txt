@@ -63,7 +63,8 @@ atmega328pb_xplained_mini.bootloader.unlock_bits=0x3F
 atmega328pb_xplained_mini.bootloader.lock_bits=0x0F
 atmega328pb_xplained_mini.bootloader.file=optiboot/optiboot/bootloaders/optiboot/optiboot_xplained328pb.hex
 
-atmega328pb_xplained_mini.build.mcu=atmega328pb
+#atmega328pb_xplained_mini.build.mcu=atmega328pb # needs AVR GCC toolchain update
+atmega328pb_xplained_mini.build.mcu=atmega328p
 atmega328pb_xplained_mini.build.f_cpu=16000000L
 atmega328pb_xplained_mini.build.board=ATMEL_ATMEGA328PB_XMINI
 atmega328pb_xplained_mini.build.core=arduino:arduino
@@ -71,7 +72,7 @@ atmega328pb_xplained_mini.build.variant=atmega328pb-xmini
 
 #--------------------------------------------------------------------------------------#
 
-atmega168pb_xplained_mini.name=Atmel atmega168p Xplained mini
+atmega168pb_xplained_mini.name=Atmel atmega168pb Xplained mini
 
 atmega168pb_xplained_mini.vid.0=0x03eb
 atmega168pb_xplained_mini.pid.0=0x2145
@@ -90,7 +91,8 @@ atmega168pb_xplained_mini.bootloader.unlock_bits=0x3F
 atmega168pb_xplained_mini.bootloader.lock_bits=0x0F
 atmega168pb_xplained_mini.bootloader.file=optiboot/optiboot/bootloaders/optiboot/optiboot_xplained168pb.hex
 
-atmega168pb_xplained_mini.build.mcu=atmega168pb
+#atmega168pb_xplained_mini.build.mcu=atmega168pb # needs AVR GCC toolchain update
+atmega168pb_xplained_mini.build.mcu=atmega168p
 atmega168pb_xplained_mini.build.f_cpu=16000000L
 atmega168pb_xplained_mini.build.board=ATMEL_ATMEGA168PB_XMINI
 atmega168pb_xplained_mini.build.core=arduino:arduino
