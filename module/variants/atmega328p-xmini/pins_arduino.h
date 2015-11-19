@@ -26,30 +26,34 @@
  *
  *
  *                                                         +-------+
- *                                                         |  USB  |
- *                                                         |       |
- *                                                         |       |
- *                                        +----------------+       +----------------+
- *                                        |                                        o|  PC5 ADC5 PCINT13 SCL            J200, Digital I/O High
- *                                        |                                        o|  PC4 ADC4 PCINT12 SDA
+ *                                                         | |USB| |
+ *                                                         | +---+ |
+ *                                                         |  | |  |
+ *                                        +----------------+  | |  +----------------+
+ *                                        |                   | |                  o|  PC5 ADC5 PCINT13 SCL            J200, Digital I/O High
+ *                                        |                   | |                  o|  PC4 ADC4 PCINT12 SDA
  *                                        |                +-------+               o|  AREF
  *                                        |                | mEDBG |               o|  GND
  *                                        |                +-------+           D13 o|  PB5 PCINT5 SCK
- *  J202, Power                    IOREF  |o                                   D12 o|  PB4 PCINT4 MISO
- *                                 RESET  |o                                   D11 o| ~PB3 OC2A PCINT3 MOSI
- *                                   3V3  |o                                   D10 o| ~PB2 OC1B PCINT2 !SS
- *                                    5V  |o                                    D9 o| ~PB1 OC1A PCINT1
- *                                   GND  |o                                    D8 o|  PB0 CLK0 PCINT0 ICP1
+ *  J202, Power                    IOREF  |o                  | |              D12 o|  PB4 PCINT4 MISO
+ *                                 RESET  |o                  | |              D11 o| ~PB3 OC2A PCINT3 MOSI
+ *                                   3V3  |o                  | |              D10 o| ~PB2 OC1B PCINT2 !SS
+ *                                    5V  |o                  | |               D9 o| ~PB1 OC1A PCINT1
+ *                                   GND  |o                  | |               D8 o|  PB0 CLK0 PCINT0 ICP1
  *                                   GND  |o             +------------+             |
  *                                   VIN  |o             | ATmega328P |         D7 o|  PD7 AIN1 PCINT23                J201, Digital I/O Low
  *                                        |              +------------+         D6 o| ~PD6 AIN0 PCINT22 OC0A
  *  J203, Analog         PCINT8 ADC0 PC0  |o A0                                 D5 o| ~PD5 T1 PCINT21 OC0B
  *                       PCINT9 ADC1 PC1  |o A1                                 D4 o|  PD4 T0 PCINT20 XCK
  *                      PCINT10 ADC2 PC2  |o A2                                 D3 o| ~PD3 INT1 PCINT19 OC2B
- *                      PCINT11 ADC3 PC3  |o A3                                 D2 o|  PD2 INT0 PCINT18
- *                  SDA PCINT12 ADC4 PC4  |o A4               ooo               D1 o|  PD1 TXD PCINT17
- *                  SCL PCINT13 ADC5 PC5  |o A5               ooo               D0 o|  PD0 RXD PCINT16
+ *                      PCINT11 ADC3 PC3  |o A3            J204, ISP            D2 o|  PD2 INT0 PCINT18
+ *                  SDA PCINT12 ADC4 PC4  |o A4               ooo               D1 o|  PD1 TXD PCINT17 (also on mEDBG/Virtual Communication Port)
+ *                  SCL PCINT13 ADC5 PC5  |o A5               ooo               D0 o|  PD0 RXD PCINT16 (also on mEDBG/Virtual Communication Port)
+ *                                        |                                         |
+ *                                        |          SW0 (D20)  LED0 (D13)          |
  *                                        +-----------------------------------------+
+ *
+ *
  *                                                         J204, ISP
  *
  *                              [PC6 RESET PCINT14]    [PB5 PCINT5 SCK]    [PB4 PCINT4 MISO]
@@ -98,6 +102,8 @@ static const uint8_t SW0 = 20;
 #define PIN_LED                     PIN_LED_13
 #define LED_BUILTIN                 PIN_LED_13
 
+#define PIN_BUTTON                  SW0
+#define PIN_SW0                     SW0
 
 #define digitalPinToPCICR(p)        (((p) >= 0 && (p) <= 21) ? (&PCICR) : ((uint8_t *)0))
 #define digitalPinToPCICRbit(p)     (((p) <= 7) ? 2 : (((p) <= 13) ? 0 : 1))
