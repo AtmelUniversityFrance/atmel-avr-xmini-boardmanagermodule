@@ -26,7 +26,7 @@ atmega328p_xplained_mini.upload.tool=arduino:avrdude
 atmega328p_xplained_mini.upload.protocol=arduino
 atmega328p_xplained_mini.upload.maximum_size=32256
 atmega328p_xplained_mini.upload.maximum_data_size=2048
-atmega328p_xplained_mini.upload.speed=55600
+atmega328p_xplained_mini.upload.speed=57600
 
 atmega328p_xplained_mini.bootloader.tool=arduino:avrdude
 atmega328p_xplained_mini.bootloader.low_fuses=0xFF
@@ -53,7 +53,7 @@ atmega328pb_xplained_mini.upload.tool=arduino:avrdude
 atmega328pb_xplained_mini.upload.protocol=arduino
 atmega328pb_xplained_mini.upload.maximum_size=32256
 atmega328pb_xplained_mini.upload.maximum_data_size=2048
-atmega328pb_xplained_mini.upload.speed=55600
+atmega328pb_xplained_mini.upload.speed=57600
 
 atmega328pb_xplained_mini.bootloader.tool=arduino:avrdude
 atmega328pb_xplained_mini.bootloader.low_fuses=0xFF
@@ -81,7 +81,7 @@ atmega168pb_xplained_mini.upload.tool=arduino:avrdude
 atmega168pb_xplained_mini.upload.protocol=arduino
 atmega168pb_xplained_mini.upload.maximum_size=15872
 atmega168pb_xplained_mini.upload.maximum_data_size=1024
-atmega168pb_xplained_mini.upload.speed=55600
+atmega168pb_xplained_mini.upload.speed=57600
 
 atmega168pb_xplained_mini.bootloader.tool=arduino:avrdude
 atmega168pb_xplained_mini.bootloader.low_fuses=0xFE
