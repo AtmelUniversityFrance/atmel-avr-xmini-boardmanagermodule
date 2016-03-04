@@ -15,7 +15,7 @@
           "name": "Atmel AVR Xplained-minis",
           "architecture": "avr",
           "version": "%%VERSION%%",
-          "category": "Contributed",
+          "category": "Partner",
           "url": "https://github.com/AtmelUniversityFrance/atmel-avr-xmini-boardmanagermodule/releases/download/v%%VERSION%%/%%FILENAME%%",
           "archiveFileName": "%%FILENAME%%",
           "checksum": "SHA-256:%%CHECKSUM%%",
