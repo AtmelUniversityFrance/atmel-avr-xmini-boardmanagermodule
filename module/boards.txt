@@ -30,7 +30,7 @@ atmega328p_xplained_mini.upload.speed=57600
 
 atmega328p_xplained_mini.bootloader.tool=arduino:avrdude
 atmega328p_xplained_mini.bootloader.low_fuses=0xE0
-atmega328p_xplained_mini.bootloader.high_fuses=0xDF
+atmega328p_xplained_mini.bootloader.high_fuses=0xDE
 atmega328p_xplained_mini.bootloader.extended_fuses=0xFC
 atmega328p_xplained_mini.bootloader.unlock_bits=0x3F
 atmega328p_xplained_mini.bootloader.lock_bits=0x0F
@@ -57,7 +57,7 @@ atmega328pb_xplained_mini.upload.speed=57600
 
 atmega328pb_xplained_mini.bootloader.tool=arduino:avrdude
 atmega328pb_xplained_mini.bootloader.low_fuses=0xE0
-atmega328pb_xplained_mini.bootloader.high_fuses=0xDF
+atmega328pb_xplained_mini.bootloader.high_fuses=0xDE
 atmega328pb_xplained_mini.bootloader.extended_fuses=0xFC
 atmega328pb_xplained_mini.bootloader.unlock_bits=0x3F
 atmega328pb_xplained_mini.bootloader.lock_bits=0x0F
@@ -86,7 +86,7 @@ atmega168pb_xplained_mini.upload.speed=57600
 atmega168pb_xplained_mini.bootloader.tool=arduino:avrdude
 atmega168pb_xplained_mini.bootloader.low_fuses=0xE0
 atmega168pb_xplained_mini.bootloader.high_fuses=0xDC
-atmega168pb_xplained_mini.bootloader.extended_fuses=0xFD
+atmega168pb_xplained_mini.bootloader.extended_fuses=0xFC
 atmega168pb_xplained_mini.bootloader.unlock_bits=0x3F
 atmega168pb_xplained_mini.bootloader.lock_bits=0x0F
 atmega168pb_xplained_mini.bootloader.file=optiboot/optiboot/bootloaders/optiboot/optiboot_xplained168pb.hex
